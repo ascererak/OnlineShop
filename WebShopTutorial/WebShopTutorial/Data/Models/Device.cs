@@ -7,7 +7,7 @@ namespace WebShopTutorial.Data.Models
 {
     public class Device
     {
-        public int Id { get; set; }
+        public int DeviceId { get; set; }
         public string Name { get; set; }
         public string ShortDescription { get; set; }
         public string LongDescription { get; set; }
@@ -15,6 +15,7 @@ namespace WebShopTutorial.Data.Models
         public string ImageUrl { get; set; }
         public string ImageThumbnailUrl { get; set; }
         public int InStok { get; set; }
+        public bool IsPopular { get; set; }
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
     }

@@ -11,13 +11,15 @@ namespace WebShopTutorial.Data.Repositories
     public class DeviceRepository : IDeviceRepository
     {
         private readonly AppDbContext appDbContext;
+
         public DeviceRepository(AppDbContext appDbContext)
         {
             this.appDbContext = appDbContext;
         }
-
         public IEnumerable<Device> Devices => appDbContext.Devices.Include(c => c.Category);
 
-        public Device GetDeviceById(int id) => appDbContext.Devices.FirstOrDefault(p => p.Id == id);
+        public IEnumerable<Device> PopularDevices => appDbContext.Devices.Where(p => p.IsPopular).Include(c => c.Category);
+
+        public Device GetDeviceById(int id) => appDbContext.Devices.FirstOrDefault(p => p.DeviceId == id);
     }
 }

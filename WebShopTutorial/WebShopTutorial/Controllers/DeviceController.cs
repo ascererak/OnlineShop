@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using WebShopTutorial.Data.Interfaces;
 using WebShopTutorial.ViewModels;
 
@@ -10,8 +10,8 @@ namespace WebShopTutorial.Controllers
 {
     public class DeviceController : Controller
     {
-        private readonly ICategoryRepository categoryRepository;
         private readonly IDeviceRepository deviceRepository;
+        private readonly ICategoryRepository categoryRepository;
 
         public DeviceController(ICategoryRepository categoryRepository, IDeviceRepository deviceRepository)
         {
@@ -21,11 +21,9 @@ namespace WebShopTutorial.Controllers
 
         public ViewResult Index()
         {
-            
-
             DeviceListViewModel vm = new DeviceListViewModel();
             vm.Devices = deviceRepository.Devices;
-            vm.CurrentCategory = "DeviceCategory";
+            vm.CurrentCategory = "Smartphones";
 
             return View(vm);
         }

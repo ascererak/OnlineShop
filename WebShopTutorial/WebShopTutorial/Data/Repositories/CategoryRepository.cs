@@ -10,6 +10,7 @@ namespace WebShopTutorial.Data.Repositories
     public class CategoryRepository : ICategoryRepository
     {
         private readonly AppDbContext appDbContext;
+
         public CategoryRepository(AppDbContext appDbContext)
         {
             this.appDbContext = appDbContext;

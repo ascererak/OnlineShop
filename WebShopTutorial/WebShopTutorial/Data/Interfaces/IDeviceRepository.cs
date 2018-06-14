@@ -9,6 +9,7 @@ namespace WebShopTutorial.Data.Interfaces
     public interface IDeviceRepository
     {
         IEnumerable<Device> Devices { get; }
+        IEnumerable<Device> PopularDevices { get; }
         Device GetDeviceById(int id);
     }
 }

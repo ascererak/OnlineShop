@@ -20,36 +20,41 @@ namespace WebShopTutorial
     {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+
         private IConfigurationRoot configurationRoot;
         public Startup(IHostingEnvironment hostingEnvironment)
         {
-            configurationRoot = new ConfigurationBuilder().SetBasePath(hostingEnvironment.ContentRootPath).AddJsonFile("appsettings.json").Build();
+            configurationRoot = new ConfigurationBuilder().SetBasePath(hostingEnvironment.ContentRootPath)
+                .AddJsonFile("appsettings.json")
+                .Build();
         }
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configurationRoot.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(configurationRoot.GetConnectionString("DefaultConnection")));
             services.AddTransient<IDeviceRepository, DeviceRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddMvc();
+
+
+            var serviceProvider = services.BuildServiceProvider();
+
+            //resolve implementations
+            var dbContext = serviceProvider.GetService<AppDbContext>();
+            //var ldapService = serviceProvider.GetService<ILdapService>();
+            DbInitializer.Seed(serviceProvider);
+
+            //return the provider
+            return serviceProvider;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
+            app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
-            DbInitializer.Seed(app);
-
-            //app.Run(async (context) =>
-            //{
-                //await context.Response.WriteAsync("Hello World!");
-            //});
         }
     }
 }
