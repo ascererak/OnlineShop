@@ -1,0 +1,57 @@
+﻿@model ShoppingCartViewModel
+
+    <div class="row checkoutForm">
+        <h2>Your shopping cart</h2>
+        <h4>Here are the devices in your shopping cart.</h4>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Selected amount</th>
+                    <th>Device</th>
+                    <th class="text-right">Price</th>
+                    <th class="text-right">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var line in Model.ShoppingCart.ShoppingCartItems)
+                {
+                    <tr>
+                        <td class="text-center">@line.Amount</td>
+                        <td class="text-left">@line.Device.Name</td>
+                        <td class="text-right">@line.Device.Price.ToString("c")</td>
+                        <td class="text-right">
+                            @((line.Amount*line.Device.Price).ToString("c"))
+                        </td>
+                        <td class="text-center"><a class="glyphicon glyphicon-remove text-danger remove" 
+                                                   asp-controller="ShoppingChart" asp-action="RemoveFromShoppingCart" 
+                                                   asp-route-deviceId="@line.Device.DeviceId"></a></td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-right">Total:</td>
+                    <td class="text-right">
+                        @Model.ShoppingCartTotal.ToString("c")
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="text-right">
+            <div class="btn-group">
+                <a class="btn btn-success" asp-controller="Order" asp-action="Checkout">Check out</a>
+                <a class="btn-group">
+                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Add more devices to buy<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a asp-controller="Device" asp-action="Index" asp-route-category="Smartphones">Smartphones</a></li>
+                        <li><a asp-controller="Device" asp-action="Index" asp-route-category="Tablets">Tablets</a></li>
+                        <li><a asp-controller="Device" asp-action="Index" asp-route-category="Laptops">Laptops</a></li>
+                        <li><a asp-controller="Device" asp-action="Index" asp-route-category="Wearable Technology">Wearable Technology</a></li>
+                        <li><a asp-controller="Device" asp-action="Index" asp-route-category="Game consoles">Game consoles</a></li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </div>

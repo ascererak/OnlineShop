@@ -1,23 +1,8 @@
-﻿<div>
-        <h2>All devices</h2>
-    </div>
+﻿<h2 class="marginTop">@Model.CurrentCategory</h2>
 
-<h2>@Model.CurrentCategory</h2>
-
-    @{
-        foreach (var device in Model.Devices)
-        {
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-                    <img src="@device.ImageThumbnailUrl" alt=""/>
-                    <div class="caption">
-                        <h3 class="pull-right">@device.Price.ToString("c")</h3>
-                        <h3>
-                            <a>@device.Name</a>
-                        </h3>
-                        <p>@device.ShortDescription</p>
-                    </div>
-                </div>  
-            </div>
-        }
+@{
+    foreach (Device device in Model.Devices)
+    {
+        @Html.Partial("DeviceSummary", device)
     }
+}

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,24 +29,30 @@ namespace WebShopTutorial
                 .AddJsonFile("appsettings.json")
                 .Build();
         }
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public /*IServiceProvider*/void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(configurationRoot.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+
             services.AddTransient<IDeviceRepository, DeviceRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
-            services.AddMvc();
+            services.AddTransient<IOrderRepository, OrderRepository>();
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShoppingCart.GetCart(sp));
+
+            services.AddMvc();
+            services.AddMemoryCache();
+            services.AddSession();
 
             var serviceProvider = services.BuildServiceProvider();
 
-            //resolve implementations
-            var dbContext = serviceProvider.GetService<AppDbContext>();
-            //var ldapService = serviceProvider.GetService<ILdapService>();
+            //var dbContext = serviceProvider.GetService<AppDbContext>();
             DbInitializer.Seed(serviceProvider);
 
-            //return the provider
-            return serviceProvider;
+            //return serviceProvider;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,7 +61,13 @@ namespace WebShopTutorial
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            app.UseSession();
+            app.UseIdentity();
+            app.UseMvc(routes => 
+            {
+                routes.MapRoute(name: "categoryFilter", template: "Device/{action}/{category?}", defaults: new { Controller = "Drink", action = "Index"}); 
+                routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
