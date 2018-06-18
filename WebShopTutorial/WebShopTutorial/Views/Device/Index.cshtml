@@ -1,8 +1,0 @@
-﻿<h2 class="marginTop">@Model.CurrentCategory</h2>
-
-@{
-    foreach (Device device in Model.Devices)
-    {
-        @Html.Partial("DeviceSummary", device)
-    }
-}

@@ -1,0 +1,11 @@
+E:\Downloads\web\MyProjects\WebShopNetCore2\WebShopNetCore2\bin\Debug\netcoreapp2.0\WebShopNetCore2.deps.json
+E:\Downloads\web\MyProjects\WebShopNetCore2\WebShopNetCore2\bin\Debug\netcoreapp2.0\WebShopNetCore2.runtimeconfig.json
+E:\Downloads\web\MyProjects\WebShopNetCore2\WebShopNetCore2\bin\Debug\netcoreapp2.0\WebShopNetCore2.runtimeconfig.dev.json
+E:\Downloads\web\MyProjects\WebShopNetCore2\WebShopNetCore2\bin\Debug\netcoreapp2.0\WebShopNetCore2.dll
+E:\Downloads\web\MyProjects\WebShopNetCore2\WebShopNetCore2\bin\Debug\netcoreapp2.0\WebShopNetCore2.pdb
+E:\Downloads\web\MyProjects\WebShopNetCore2\WebShopNetCore2\obj\Debug\netcoreapp2.0\WebShopNetCore2.csprojResolveAssemblyReference.cache
+E:\Downloads\web\MyProjects\WebShopNetCore2\WebShopNetCore2\obj\Debug\netcoreapp2.0\WebShopNetCore2.csproj.CoreCompileInputs.cache
+E:\Downloads\web\MyProjects\WebShopNetCore2\WebShopNetCore2\obj\Debug\netcoreapp2.0\WebShopNetCore2.AssemblyInfoInputs.cache
+E:\Downloads\web\MyProjects\WebShopNetCore2\WebShopNetCore2\obj\Debug\netcoreapp2.0\WebShopNetCore2.AssemblyInfo.cs
+E:\Downloads\web\MyProjects\WebShopNetCore2\WebShopNetCore2\obj\Debug\netcoreapp2.0\WebShopNetCore2.dll
+E:\Downloads\web\MyProjects\WebShopNetCore2\WebShopNetCore2\obj\Debug\netcoreapp2.0\WebShopNetCore2.pdb

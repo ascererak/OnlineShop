@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using WebShopNetCore2.Models.Entities;
+
+namespace WebShopNetCore2.Models.Interfaces
+{
+    public interface IDeviceRepository
+    {
+        IEnumerable<Device> Devices { get; }
+        IEnumerable<Device> PopularDevices { get; }
+
+        Device GetDeviceById(int deviceId);
+    }
+}
