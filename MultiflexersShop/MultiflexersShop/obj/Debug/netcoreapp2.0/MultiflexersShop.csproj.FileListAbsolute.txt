@@ -1,0 +1,11 @@
+E:\Downloads\Project\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.csprojResolveAssemblyReference.cache
+E:\Downloads\Project\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.csproj.CoreCompileInputs.cache
+E:\Downloads\Project\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.AssemblyInfoInputs.cache
+E:\Downloads\Project\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.AssemblyInfo.cs
+E:\Downloads\Project\OnlineShop\MultiflexersShop\MultiflexersShop\bin\Debug\netcoreapp2.0\MultiflexersShop.deps.json
+E:\Downloads\Project\OnlineShop\MultiflexersShop\MultiflexersShop\bin\Debug\netcoreapp2.0\MultiflexersShop.runtimeconfig.json
+E:\Downloads\Project\OnlineShop\MultiflexersShop\MultiflexersShop\bin\Debug\netcoreapp2.0\MultiflexersShop.runtimeconfig.dev.json
+E:\Downloads\Project\OnlineShop\MultiflexersShop\MultiflexersShop\bin\Debug\netcoreapp2.0\MultiflexersShop.dll
+E:\Downloads\Project\OnlineShop\MultiflexersShop\MultiflexersShop\bin\Debug\netcoreapp2.0\MultiflexersShop.pdb
+E:\Downloads\Project\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.dll
+E:\Downloads\Project\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.pdb
