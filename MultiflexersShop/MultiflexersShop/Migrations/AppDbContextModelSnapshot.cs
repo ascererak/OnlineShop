@@ -198,6 +198,10 @@ namespace MultiflexersShop.Migrations
                     b.Property<int>("DeviceId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime>("AddDate");
+
+                    b.Property<int>("Bought");
+
                     b.Property<int>("CategoryId");
 
                     b.Property<string>("ImageThumbnailUrl");
@@ -213,6 +217,8 @@ namespace MultiflexersShop.Migrations
                     b.Property<string>("Name");
 
                     b.Property<decimal>("Price");
+
+                    b.Property<int>("Promotional");
 
                     b.Property<string>("ShortDescription");
 
