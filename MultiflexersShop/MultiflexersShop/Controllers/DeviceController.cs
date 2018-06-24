@@ -64,9 +64,10 @@ namespace MultiflexersShop.Controllers
             return View(deviceViewModel);
         }
 
-        public IActionResult Details()
+        public IActionResult Details(int DeviceId)
         {
-            return View();
+            Device device = deviceRepository.GetDeviceById(DeviceId);
+            return View(device);
         }
     }
 }

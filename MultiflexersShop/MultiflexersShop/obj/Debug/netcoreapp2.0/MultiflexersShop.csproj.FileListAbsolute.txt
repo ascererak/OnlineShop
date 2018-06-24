@@ -20,3 +20,14 @@ e:\Downloads\web\MyProjects\MultiflexersShop\MultiflexersShop\obj\Debug\netcorea
 e:\Downloads\web\MyProjects\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.AssemblyInfo.cs
 e:\Downloads\web\MyProjects\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.dll
 e:\Downloads\web\MyProjects\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.pdb
+C:\Users\Andrew\Documents\git\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Documents\git\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\Documents\git\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.AssemblyInfoInputs.cache
+C:\Users\Andrew\Documents\git\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.AssemblyInfo.cs
+C:\Users\Andrew\Documents\git\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.dll
+C:\Users\Andrew\Documents\git\OnlineShop\MultiflexersShop\MultiflexersShop\obj\Debug\netcoreapp2.0\MultiflexersShop.pdb
+C:\Users\Andrew\Documents\git\OnlineShop\MultiflexersShop\MultiflexersShop\bin\Debug\netcoreapp2.0\MultiflexersShop.deps.json
+C:\Users\Andrew\Documents\git\OnlineShop\MultiflexersShop\MultiflexersShop\bin\Debug\netcoreapp2.0\MultiflexersShop.runtimeconfig.json
+C:\Users\Andrew\Documents\git\OnlineShop\MultiflexersShop\MultiflexersShop\bin\Debug\netcoreapp2.0\MultiflexersShop.runtimeconfig.dev.json
+C:\Users\Andrew\Documents\git\OnlineShop\MultiflexersShop\MultiflexersShop\bin\Debug\netcoreapp2.0\MultiflexersShop.dll
+C:\Users\Andrew\Documents\git\OnlineShop\MultiflexersShop\MultiflexersShop\bin\Debug\netcoreapp2.0\MultiflexersShop.pdb
