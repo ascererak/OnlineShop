@@ -14,21 +14,21 @@ namespace MultiflexersShop
 {
     public class Startup
     {
-        private IConfigurationRoot configuration;
-        //public IConfiguration Configuration { get; }
+        //private IConfigurationRoot configuration;
+        public IConfiguration Configuration { get; }
 
-        public Startup(/*IConfiguration configuration*/IHostingEnvironment hostingEnvironment)
+        public Startup(IConfiguration configuration/*IHostingEnvironment hostingEnvironment*/)
         {
-            //Configuration = configuration;
-            configuration = new ConfigurationBuilder().SetBasePath(hostingEnvironment.ContentRootPath)
-                .AddJsonFile($"appsettings.production.json").Build();
+            Configuration = configuration;
+            //configuration = new ConfigurationBuilder().SetBasePath(hostingEnvironment.ContentRootPath)
+            //    .AddJsonFile($"appsettings.production.json").Build();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Сonfiguration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 
