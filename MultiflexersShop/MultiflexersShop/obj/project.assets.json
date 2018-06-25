@@ -12636,11 +12636,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "e:\\Downloads\\web\\MyProjects\\MultiflexersShop\\MultiflexersShop\\MultiflexersShop.csproj",
+      "projectUniqueName": "E:\\Downloads\\web\\MyProjects\\MultiflexersShop\\MultiflexersShop\\MultiflexersShop.csproj",
       "projectName": "MultiflexersShop",
-      "projectPath": "e:\\Downloads\\web\\MyProjects\\MultiflexersShop\\MultiflexersShop\\MultiflexersShop.csproj",
+      "projectPath": "E:\\Downloads\\web\\MyProjects\\MultiflexersShop\\MultiflexersShop\\MultiflexersShop.csproj",
       "packagesPath": "C:\\Users\\Alexey Bondar\\.nuget\\packages\\",
-      "outputPath": "e:\\Downloads\\web\\MyProjects\\MultiflexersShop\\MultiflexersShop\\obj\\",
+      "outputPath": "E:\\Downloads\\web\\MyProjects\\MultiflexersShop\\MultiflexersShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

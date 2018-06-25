@@ -21,6 +21,7 @@ namespace MultiflexersShop.Controllers
         }
 
         [HttpPost]
+        [Route("Login")]
         public async Task<IActionResult> Login([FromBody]LoginViewModel loginViewModel)
         {
             if (!ModelState.IsValid)
@@ -39,8 +40,8 @@ namespace MultiflexersShop.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(LoginViewModel loginViewModel)
+        [Route("Register")]
+        public async Task<IActionResult> Register([FromBody]LoginViewModel loginViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -58,6 +59,7 @@ namespace MultiflexersShop.Controllers
 
         [HttpPost]
         [Authorize]
+        [Route("Logout")]
         public async void Logout()
         {
             await signInManager.SignOutAsync();
