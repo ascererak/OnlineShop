@@ -17,7 +17,7 @@ namespace MultiflexersShop
         //private IConfigurationRoot configuration;
         public IConfiguration Configuration { get; }
 
-        public Startup(IConfiguration configuration/*IHostingEnvironment hostingEnvironment*/)
+        public Startup(/*IConfiguration configuration*/IHostingEnvironment hostingEnvironment)
         {
             Configuration = configuration;
             //configuration = new ConfigurationBuilder().SetBasePath(hostingEnvironment.ContentRootPath)
@@ -28,7 +28,7 @@ namespace MultiflexersShop
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Сonfiguration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 

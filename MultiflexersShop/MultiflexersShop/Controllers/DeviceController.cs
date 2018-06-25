@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MultiflexersShop.Models.Entities;
 using MultiflexersShop.Models.Interfaces;
@@ -68,6 +69,24 @@ namespace MultiflexersShop.Controllers
         {
             Device device = deviceRepository.GetDeviceById(DeviceId);
             return View(device);
+        }
+
+        public IActionResult Search(string searchString)
+        {
+            var devices = deviceRepository.Devices;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                devices = devices.Where(s => s.Name.ToLower().Contains(searchString.ToLower()));
+            }
+
+            DeviceSearchViewModel deviceSearchViewModel = new DeviceSearchViewModel
+            {
+                Devices = devices,
+                SearchString = searchString
+            };
+
+            return View(deviceSearchViewModel);
         }
     }
 }

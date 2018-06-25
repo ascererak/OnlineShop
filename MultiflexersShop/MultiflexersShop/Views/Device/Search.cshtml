@@ -1,0 +1,20 @@
+﻿@model DeviceSearchViewModel
+@if (Model.Devices.Count() == 0)
+{
+    <h2 class="marginTop">We found nothing on you request"@Model.SearchString"</h2>
+}
+else if(Model.Devices.Count() == 1)
+{
+    <h2 class="marginTop">We found @Model.Devices.Count() item on you request "@Model.SearchString"</h2>
+}
+else
+{
+    <h2 class="marginTop">We found @Model.Devices.Count() items on you request "@Model.SearchString"</h2>
+}
+
+@{
+    foreach (Device device in Model.Devices)
+    {
+        @Html.Partial("DeviceSummary", device)
+    }
+}

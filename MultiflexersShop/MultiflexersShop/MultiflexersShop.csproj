@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Contact\" />
-    <Folder Include="Views\Device\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\ShoppingCart\" />
     <Folder Include="Views\Order\" />
